@@ -1,1 +1,23 @@
-example@form page
+<%= form_for @job_application do |f| %>
+  <p>
+    <%= label_tag(:full_name, "Full name") %>
+    <%= f.text_field :full_name %>
+  </p>
+  <p>
+    <%= label_tag(:phone, "Phone") %>
+    <%= f.telephone_field :phone %>
+  </p>
+  <p>
+    <%= label_tag(:hobby, "Hobby") %>
+    <%= f.text_field :hobby %></p>
+  <p>
+    <%= label_tag(:years_experience, "Years experience") %>
+    <%= f.number_field :years_experience %>
+  </p>
+  <p>
+    <%= label_tag(:available_date, "Available date") %>
+    <%= f.date_field :available_date, :value => "yyyy-mm-dd" %></p>
+  <p>
+    <%= f.submit "Create Job Application" %>
+  </p>
+<% end %>
