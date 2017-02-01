@@ -1,0 +1,12 @@
+<%= link_to 'Back', locations_path %>
+
+<div class="location">
+  <h3>City: <%= @location.city %></h3>
+  <%= @location.description %>
+  <%= link_to image_tag(@location.image, class: "location"), @location %>
+</div>
+
+<% @events.each do |event| %>
+  <p>Event Name: <%= event.name %><br>
+  Date: <%= event.date %></p>
+<% end %>
