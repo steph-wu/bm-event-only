@@ -2,5 +2,6 @@
 
 <%= link_to 'Back', location_events_path %>
 <%= link_to 'Edit', edit_location_event_path %>
+<%= link_to 'Delete', location_event_path, method: :delete, data: {confirm: "Are you sure you want to delete the event '#{@event.name}'? This cannot be undone!"} %>
 
 <%= render @event %>
