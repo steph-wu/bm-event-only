@@ -2,4 +2,6 @@
 
 <%= link_to 'Back', locations_path %>
 
-<%= render 'event', location: @location, events: @events %>
+<%= render @location %>
+
+<%= render @events %>
